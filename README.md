@@ -1,3 +1,3 @@
-# passingbreeze-repo-template
+# passingbreeze-solutions-algorithm-data_structure-problems-from-leetcode
 
-Repo Template for Passingbreeze's Side Project
+Passingbreeze's Solution of Algorithm and Data Structure Problems from LeetCode
