@@ -1,7 +1,7 @@
 package solution
 
 func MakeEqual(words []string) bool {
-	answer := make(map[string]int)
+    answer := make(map[string]int)
 	for _, word := range words {
 		for _, char := range word {
 			answer[string(char)]++
@@ -14,5 +14,8 @@ func MakeEqual(words []string) bool {
 		}
 		prev = count
 	}
+    if len(answer) > 0 && prev == 1 {
+        return false
+    }
 	return true
 }
