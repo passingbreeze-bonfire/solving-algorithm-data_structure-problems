@@ -1,7 +1,7 @@
 package solution_test
 
 import (
-	"solution"
+	"solving-algorithm-data_structure-problems/prob1987/solution"
 	"testing"
 )
 
