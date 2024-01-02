@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '**/solution/**'
+      - "**/solution/solution_test.go"
 
 jobs:
   solution_test:
