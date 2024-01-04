@@ -11,13 +11,14 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 5
-      - name: Process files changed in the current commit
-        run: |
-          changedFiles=$(git diff --name-only HEAD^)
-          for file in $changedFiles; do
-            echo "Processing file: $file"
-          done
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
           go-version: 1.21.5
+      - name: Process files changed in the current commit
+        run: |
+          testFile=$(git diff --name-only HEAD^ | grep -E '.*_test.go$')
+          echo $testFile
+#          for file in $changedFiles; do
+#            echo "Processing file: $file"
+#          done

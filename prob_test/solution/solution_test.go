@@ -29,7 +29,9 @@ func TestFindContentChildren(t *testing.T) {
 	if solution.FindContentChildren(case3_g, case3_s) != 960 {
 		t.Errorf("Case3 Expected 960, got %d", solution.FindContentChildren(case3_g, case3_s))
 	}
+
 	if solution.FindContentChildrenTwoPointer(case3_g, case3_s) != 960 {
 		t.Errorf("Case3 Expected 960, got %d", solution.FindContentChildren(case3_g, case3_s))
 	}
+
 }
