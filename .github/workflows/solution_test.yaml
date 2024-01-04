@@ -17,6 +17,6 @@ jobs:
           go-version: 1.21.5
       - name: test solution code
         run: |
-          testFile=$(git diff --name-only HEAD^ | grep -E '.*_test.go$')
-          echo $testFile
-          go test -v $testFile
+          testFile=$(git diff --name-only HEAD^ | grep -E '.solution_test.go$')
+          testPath=$(echo $testFile | sed 's/solution_test.go//g')
+          go test -v $testPath
